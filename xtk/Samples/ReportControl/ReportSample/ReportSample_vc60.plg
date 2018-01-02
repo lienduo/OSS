@@ -1,0 +1,76 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ReportSample - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/vc60/ReportSample.res" /i "../../../Source" /i "../../AboutDlg" /d "_DEBUG" /d "_AFXDLL" "E:\Library\xtk\Samples\ReportControl\ReportSample\ReportSample.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/vc60/ReportSample_vc60.pch" /Yu"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\ReportSample\HeaderFooterView.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\MainFrm.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\MessageRecord.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\PerfomanceTestDlg.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\PropertiesView.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\ReportMultilinePaintManager.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\ReportSample.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\ReportSampleDoc.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\ReportSampleView.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\TaskListView.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportSample\TreeViewDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/vc60/ReportSample_vc60.pch" /Yc"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\ReportSample\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE3.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE4.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/vc60/ReportSampleD.pdb" /debug /machine:I386 /nodefaultlib:"libcd.lib" /out:"../../../bin/vc60/ReportSampleD.exe" /pdbtype:sept /libpath:"../../../lib/vc60" 
+.\Debug\vc60\HeaderFooterView.obj
+.\Debug\vc60\MainFrm.obj
+.\Debug\vc60\MessageRecord.obj
+.\Debug\vc60\PerfomanceTestDlg.obj
+.\Debug\vc60\PropertiesView.obj
+.\Debug\vc60\ReportMultilinePaintManager.obj
+.\Debug\vc60\ReportSample.obj
+.\Debug\vc60\ReportSampleDoc.obj
+.\Debug\vc60\ReportSampleView.obj
+.\Debug\vc60\StdAfx.obj
+.\Debug\vc60\TaskListView.obj
+.\Debug\vc60\TreeViewDlg.obj
+.\Debug\vc60\ReportSample.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with ToolkitPro1121vc60D.dll
+Compiling...
+HeaderFooterView.cpp
+MainFrm.cpp
+MessageRecord.cpp
+PerfomanceTestDlg.cpp
+PropertiesView.cpp
+ReportMultilinePaintManager.cpp
+ReportSample.cpp
+ReportSampleDoc.cpp
+ReportSampleView.cpp
+TaskListView.cpp
+TreeViewDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ReportSampleD.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

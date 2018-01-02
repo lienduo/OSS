@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OwnerDraw - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/vc60/OwnerDraw.res" /i "../../../Source" /i "../../AboutDlg" /d "_DEBUG" /d "_AFXDLL" "E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\OwnerDraw.rc"" 
+Creating temporary file "C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/vc60/" /Fp"Debug/vc60/OwnerDraw_vc60.pch" /Yu"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\CoolGridPage.cpp"
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\DelphiGridPage.cpp"
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\DialogSheet.cpp"
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\OwnerDraw.cpp"
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\SimpleGridPage.cpp"
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\StandardGridPage.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C0.tmp" 
+Creating temporary file "C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C1.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../include" /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/vc60/" /Fp"Debug/vc60/OwnerDraw_vc60.pch" /Yc"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Program Files\Codejock Software\MFC\Xtreme ToolkitPro v11.2.1\Samples\PropertyGrid\OwnerDraw\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C1.tmp" 
+Creating temporary file "C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C2.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/vc60/OwnerDrawd.pdb" /debug /machine:I386 /out:"../../../bin/vc60/OwnerDrawd.exe" /pdbtype:sept /libpath:"../../../lib/vc60" 
+".\Debug\vc60\CoolGridPage.obj"
+".\Debug\vc60\DelphiGridPage.obj"
+".\Debug\vc60\DialogSheet.obj"
+".\Debug\vc60\OwnerDraw.obj"
+".\Debug\vc60\SimpleGridPage.obj"
+".\Debug\vc60\StandardGridPage.obj"
+".\Debug\vc60\StdAfx.obj"
+".\Debug\vc60\OwnerDraw.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\NINGSU~1\LOCALS~1\Temp\RSP5C2.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with ToolkitPro1121vc60D.dll
+Compiling...
+CoolGridPage.cpp
+DelphiGridPage.cpp
+DialogSheet.cpp
+OwnerDraw.cpp
+SimpleGridPage.cpp
+StandardGridPage.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+OwnerDrawd.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

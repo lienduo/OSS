@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ReportDialog - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/vc60/ReportDialog.res" /i "../../../Source" /i "../../AboutDlg" /d "_DEBUG" /d "_AFXDLL" "E:\Library\xtk\Samples\ReportControl\ReportDialog\ReportDialog.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE.tmp" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc60/ReportDialog_vc60.pch" /Yu"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\ReportDialog\MessageRecord.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportDialog\ReportDialog.cpp"
+"E:\Library\xtk\Samples\ReportControl\ReportDialog\ReportDialogDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDE.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDF.tmp" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc60/ReportDialog_vc60.pch" /Yc"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\ReportDialog\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPDF.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE0.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/vc60/ReportDialogD.pdb" /debug /machine:I386 /out:"../../../bin/vc60/ReportDialogD.exe" /pdbtype:sept /libpath:"../../../lib/vc60" 
+.\Debug\vc60\MessageRecord.obj
+.\Debug\vc60\ReportDialog.obj
+.\Debug\vc60\ReportDialogDlg.obj
+.\Debug\vc60\StdAfx.obj
+.\Debug\vc60\ReportDialog.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE0.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with ToolkitPro1121vc60D.dll
+Compiling...
+MessageRecord.cpp
+ReportDialog.cpp
+ReportDialogDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ReportDialogD.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

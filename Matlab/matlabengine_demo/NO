@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='ISO-8859-1' standalone='yes'?>
+<tagfile>
+  <compound kind="class">
+    <name>CMatlabEngine</name>
+    <filename>classCMatlabEngine.html</filename>
+    <member kind="function" protection="public">
+      <type>void</type>
+      <name>ProcessString</name>
+      <anchor>z13_0</anchor>
+      <arglist>(LPCTSTR szName, BSTR &amp;bstrName)</arglist>
+    </member>
+    <member kind="function" protection="public">
+      <type>HRESULT</type>
+      <name>GetMatrixKnownSize</name>
+      <anchor>z13_1</anchor>
+      <arglist>(LPCTSTR szName, UINT nRows, UINT nCols, std::vector&lt; double &gt; &amp;vArray)</arglist>
+    </member>
+    <member kind="function" protection="public">
+      <type>HRESULT</type>
+      <name>GetMatrixKnownSize</name>
+      <anchor>z13_2</anchor>
+      <arglist>(LPCTSTR szName, UINT nRows, UINT nCols, std::vector&lt; double &gt; &amp;vRealArray, std::vector&lt; double &gt; &amp;vImgArray)</arglist>
+    </member>
+    <member kind="function" protection="public" static="yes">
+      <type>void</type>
+      <name>ErrHandler</name>
+      <anchor>z13_3</anchor>
+      <arglist>(HRESULT hr, EXCEPINFO excep, UINT uArgErr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMatlabEngine</name>
+      <anchor>z1_0</anchor>
+      <arglist>(bool bDedicated=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsInitialized</name>
+      <anchor>z3_0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsVisible</name>
+      <anchor>z5_0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>Show</name>
+      <anchor>z5_1</anchor>
+      <arglist>(bool bShow=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>MinimizeWindow</name>
+      <anchor>z5_2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>MaximiseWidow</name>
+      <anchor>z5_3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>Quit</name>
+      <anchor>z5_4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>Execute</name>
+      <anchor>z7_0</anchor>
+      <arglist>(LPCTSTR szCode)</arglist>
+    </member>
+    <member kind="function">
+      <type>const BSTR &amp;</type>
+      <name>GetResult</name>
+      <anchor>z7_1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>PutMatrix</name>
+      <anchor>z7_2</anchor>
+      <arglist>(LPCTSTR szName, const std::vector&lt; double &gt; &amp;vArray, UINT nRows, UINT nCols)</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>PutMatrix</name>
+      <anchor>z7_3</anchor>
+      <arglist>(LPCTSTR szName, const std::vector&lt; double &gt; &amp;vRealArray, const std::vector&lt; double &gt; &amp;vImgArray, UINT nRows, UINT nCols)</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>GetMatrix</name>
+      <anchor>z7_4</anchor>
+      <arglist>(LPCTSTR szName, UINT &amp;nRows, UINT &amp;nCols, std::vector&lt; double &gt; &amp;vRealArray, std::vector&lt; double &gt; *pImgArray=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>PutString</name>
+      <anchor>z7_5</anchor>
+      <arglist>(LPCTSTR szName, LPCTSTR szString)</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>GetString</name>
+      <anchor>z7_6</anchor>
+      <arglist>(LPCTSTR szName, LPTSTR &amp;szString)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWorkspace</name>
+      <anchor>z9_0</anchor>
+      <arglist>(LPCTSTR szWorkspace)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetLastErrorMessage</name>
+      <anchor>z11_0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>HRESULT</type>
+      <name>GetLastHResult</name>
+      <anchor>z11_1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const VARIANT &amp;</type>
+      <name>GetLastVResult</name>
+      <anchor>z11_2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const EXCEPINFO &amp;</type>
+      <name>GetLastExcep</name>
+      <anchor>z11_3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>UINT</type>
+      <name>GetLastArgErr</name>
+      <anchor>z11_4</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+</tagfile>

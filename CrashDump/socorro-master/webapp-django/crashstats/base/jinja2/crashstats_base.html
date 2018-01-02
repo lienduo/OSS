@@ -1,0 +1,200 @@
+{% from "macros/pagination.html" import pagination %}
+<!DOCTYPE html>
+<html lang="en-US" class="production">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block page_title %}Crash Data for {{ product }}{% endblock %}</title>
+
+        {% block site_css %}
+            {% stylesheet 'crashstats_base' %}
+        {% endblock %}
+
+        {% if not DEBUG %}
+            {#
+                Use the preload technique which gives a performance boost for
+                modern browsers.
+                See https://developers.google.com/analytics/devguides/collection/analyticsjs/#alternative_async_tracking_snippet
+            #}
+            {% javascript 'google_analytics' %}
+            <script async src="https://www.google-analytics.com/analytics.js"></script>
+        {% endif %}
+
+    <meta name="google-signin-client_id" content="{{ OAUTH2_CLIENT_ID }}">
+    {% if OAUTH2_SIGNOUT %}
+    <meta name="signin" content="signout">
+    {% endif %}
+
+    </head>
+
+    <body>
+    <div class="page-header">
+        {% include "header_title.html" %}
+
+        <form id="simple_search" method="get" action="{{ url('crashstats:quick_search') }}">
+            <label for="q" class="visually-hidden">Search</label>
+            <input type="text" id="q" name="query" placeholder="Find Crash ID or Signature">
+            <input type="submit" class="hidden">
+        </form>
+    </div>
+
+    <h1>Product Navigation</h1>
+
+    <div class="version-nav">
+        <input type="hidden" id="url_base" name="url_base" value="/products/{{ product }}" />
+        <input type="hidden" id="url_site" name="url_site" value="/" />
+
+    {% block product_nav_filter %}
+        <ul class="filter">
+            <li>
+                <label for="products_select">Product:</label>
+                <select id="products_select">
+                {% for p in active_versions %}
+                    <option value="{{ p }}" {% if p == product %}selected{% endif %}>{{ p }}</option>
+                {% endfor %}
+                </select>
+            </li>
+            <li class="version_select">
+                <label for="product_version_select" class="visually-hidden">Select Version:</label>
+                <select id="product_version_select" >
+                    <optgroup label=" ">
+                        <option value="Current Versions">Current Versions</option>
+                    </optgroup>
+                    <optgroup label=" ">
+                    {% for pv in active_versions[product] %}
+                        {% if pv.is_featured %}
+                        <option
+                            value="{{ pv.version }}"
+                            {% if pv.version == version %}selected{% endif %}
+                        >{{ pv.version }}</option>
+                        {% endif %}
+                    {% endfor  %}
+                    </optgroup>
+                    <optgroup label=" ">
+                    {% for pv in active_versions[product] %}
+                        {% if not pv.is_featured %}
+                        <option
+                            value="{{ pv.version }}"
+                            {% if pv.version == version %}selected{% endif %}
+                        >{{ pv.version }}</option>
+                        {% endif %}
+                    {% endfor  %}
+                    </optgroup>
+                </select>
+            </li>
+            <li>
+                <label for="report_select">Report:</label>
+                <select id="report_select">
+                    <optgroup label=" ">
+                        <option
+                            value="products"
+                            data-url-product="{{ url('home:home', '__PRODUCT__') }}"
+                            data-url-version="{{ url('home:home', '__PRODUCT__') }}?version=__VERSION__"
+                            {% if report == 'products' %}selected{% endif %}
+                        >Overview</option>
+                    </optgroup>
+                    <optgroup label=" ">
+                        <option
+                            value="daily"
+                            data-url-product="{{ url('crashstats:crashes_per_day') }}?p=__PRODUCT__"
+                            data-url-version="{{ url('crashstats:crashes_per_day') }}?p=__PRODUCT__&amp;v=__VERSION__"
+                            {% if report == 'daily' %}selected{% endif %}
+                        >Crashes per Day</option>
+                        <option
+                            value="topcrasher"
+                            data-url-product="{{ url('topcrashers:topcrashers') }}?product=__PRODUCT__"
+                            data-url-version="{{ url('topcrashers:topcrashers') }}?product=__PRODUCT__&amp;version=__VERSION__"
+                            {% if report == 'topcrasher' %}selected{% endif %}
+                        >Top Crashers</option>
+                        <option
+                            value="gccrashes"
+                            data-url-product="{{ url('crashstats:gccrashes', '__PRODUCT__') }}"
+                            data-url-version="{{ url('crashstats:gccrashes', '__PRODUCT__', '__VERSION__') }}"
+                            {% if report == 'gccrashes' %}selected{% endif %}
+                        >GC Crashes</option>
+                        {% if request.user.has_perm('crashstats.view_exploitability') %}
+                        <option
+                            value="exploitable"
+                            data-url-product="{{ url('crashstats:exploitability_report') }}?product=__PRODUCT__"
+                            data-url-version="{{ url('crashstats:exploitability_report') }}?product=__PRODUCT__&amp;version=__VERSION__"
+                            {% if report == 'exploitable' %}selected{% endif %}
+                        >Exploitable Crashes</option>
+                        {% endif %}
+                    </optgroup>
+                </select>
+            </li>
+        </ul>
+    {% endblock %}
+
+        <div class="search">
+            <a href="{{ url('supersearch.search') }}?product={{ product }}{% if version and version != 'ALL' %}&amp;version={{ version }}{% endif %}&amp;_dont_run=1">
+                Super Search
+            </a>
+        </div>
+    </div>
+
+    {% for status in status_messages %}
+    <div class="status-message severity-{{ status.severity }}">
+        {{ status.text | replace_bugzilla_links }}
+        <small>({{ status.date | time_tag }})</small>
+    </div>
+    {% endfor %}
+
+    {% if messages %}
+        {% for message in messages %}
+          <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
+
+    <div id="footer" class="page-footer">
+        {% include "footer_nav.html" %}
+
+        <div class="login">
+            <ul>
+                <li>
+                {% if request.user and request.user.is_active %}
+                    <a href="{{ url('profile:profile') }}"
+                      title="You are signed in as {{ request.user.email }}"
+                    >
+                        Your Profile
+                    </a>
+                    |
+                    <a href="{{ url('tokens:home') }}">API Tokens</a>
+                    |
+                    <a href="{{ url('symbols:home') }}">Symbols</a>
+                    {% if request.user.is_superuser %}
+                    |
+                    <a href="{{ url('manage:home') }}">Admin</a>
+                    {% endif %}
+                    |
+                    {% if request.session.get('signin_method') == 'google' %}
+                        {% csrf_token %}
+                        <a href="{{ url('auth:oauth2_signout') }}" class="google-signout">
+                            <span>Sign out</span>
+                        </a>
+                    {% endif %}
+                {% else %}
+                    {% csrf_token %}
+                    <div
+                        id="signin2"
+                        class="google-signin"
+                        style="float:right"
+                        data-signin-url="{{ url('auth:oauth2_signin') }}"></div>
+                {% endif %}
+                </li>
+            </ul>
+        </div>
+        <br class="clear" />
+    </div>
+    {% block site_js %}
+
+    {% javascript 'crashstats_base' %}
+
+    <script src="https://apis.google.com/js/auth2:signin2.js?onload=googleAPILoaded"></script>
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VirtualList - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/vc60/VirtualList.res" /i "../../../Source" /i "../../AboutDlg" /d "_DEBUG" /d "_AFXDLL" "E:\Library\xtk\Samples\ReportControl\VirtualList\VirtualList.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc60/VirtualList_vc60.pch" /Yu"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\VirtualList\DialogRowsCount.cpp"
+"E:\Library\xtk\Samples\ReportControl\VirtualList\MainFrm.cpp"
+"E:\Library\xtk\Samples\ReportControl\VirtualList\VirtualList.cpp"
+"E:\Library\xtk\Samples\ReportControl\VirtualList\VirtualListDoc.cpp"
+"E:\Library\xtk\Samples\ReportControl\VirtualList\VirtualListView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../../Source" /I "../../AboutDlg" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/vc60/VirtualList_vc60.pch" /Yc"stdafx.h" /Fo"Debug/vc60/" /Fd"Debug/vc60/" /FD /GZ /Zm200 /c 
+"E:\Library\xtk\Samples\ReportControl\VirtualList\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE7.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE8.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/vc60/VirtualListD.pdb" /debug /machine:I386 /out:"../../../bin/vc60/VirtualListD.exe" /pdbtype:sept /libpath:"../../../lib/vc60" 
+.\Debug\vc60\DialogRowsCount.obj
+.\Debug\vc60\MainFrm.obj
+.\Debug\vc60\StdAfx.obj
+.\Debug\vc60\VirtualList.obj
+.\Debug\vc60\VirtualListDoc.obj
+.\Debug\vc60\VirtualListView.obj
+.\Debug\vc60\VirtualList.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE8.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with ToolkitPro1121vc60D.dll
+Compiling...
+DialogRowsCount.cpp
+MainFrm.cpp
+VirtualList.cpp
+VirtualListDoc.cpp
+VirtualListView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+VirtualListD.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

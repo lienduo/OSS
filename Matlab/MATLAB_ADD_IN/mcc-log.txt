@@ -1,0 +1,42 @@
+This is the output from running Visual MATLAB.
+Please close this window after viewing it.
+--------------MCC/MEX BEGIN---------------
+mcc -k "E:\TRABAJOS\DANIEL\PRACTICASC++\conv\mcc.mak" -/n -m -A line:on -g libmmfile.mlib -vh  "E:\trabajos\daniel\practicasC++\conv\MyFunc.m"
+Compiler version: 2.1
+Parsing file "E:\TRABAJOS\DANIEL\PRACTICASC++\conv\MyFunc.m"
+	(Referenced from: "Compiler Command Line").
+Generating file "MyFunc.h".
+Generating file "MyFunc.c".
+Generating file "MyFunc_main.c".
+Executing command: mbuild -g -v -output "MyFunc" "MyFunc.c" "MyFunc_main.c" -link exe -k "E:\TRABAJOS\DANIEL\PRACTICASC++\conv\mcc.mak" -no_setup
+ This is mbuild (c) 1996 - 2000 The MathWorks, Inc.
+
+-> Default options filename found in C:\Documents and Settings\daniel\Application Data\MathWorks\MATLAB\R12
+----------------------------------------------------------------
+->    Options file           = C:\Documents and Settings\daniel\Application Data\MathWorks\MATLAB\R12\compopts.bat
+->    COMPILER               = cl
+->    Compiler flags:
+         COMPFLAGS           = -c -Zp8 -G5 -W3 -nologo
+         OPTIMFLAGS          = -O2 -DNDEBUG
+         DEBUGFLAGS          = -Zi -Fd"MyFunc.pdb"
+         arguments           = 
+         Name switch         = /Fo
+->    Pre-linking commands   = 
+->    LINKER                 = link
+->    Link directives:
+         LINKFLAGS           = kernel32.lib user32.lib gdi32.lib /LIBPATH:"C:\matlabR12\extern\lib\win32\microsoft\msvc60" libmmfile.lib libmatlb.lib /nologo libmx.lib libmat.lib sgl.lib libmwsglm.lib
+         Name directive      = "/out:MyFunc.exe"
+         File link directive = 
+         Lib. link directive = 
+         Rsp file indicator  = @
+----------------------------------------------------------------
+
+
+--> "copy "C:\matlabR12\extern\include\FigureMenuBar.fig" bin\FigureMenuBar.fig"
+
+        1 archivos copiados.
+
+--> "copy "C:\matlabR12\extern\include\FigureToolBar.fig" bin\FigureToolBar.fig"
+
+        1 archivos copiados.
+--------------MCC/MEX DONE----------------

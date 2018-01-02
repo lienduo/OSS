@@ -1,0 +1,226 @@
+.page-heading {
+    p {
+        font-style: italic;
+
+        time {
+            font-weight: bold;
+        }
+    }
+}
+
+#panels-nav {
+    display: block;
+    margin: 20px 0 0 20px;
+
+    .tabs {
+        li {
+            display: inline-block;
+
+            a:link,
+            a:visited {
+                display: inline-block;
+                background-color: #e0e0e0;
+                border: 1px solid #d1d1d1;
+                border-bottom: none;
+                color: #333;
+                font-size: 1.1em;
+                padding: .3em .8em;
+                text-decoration: none;
+                text-align: center;
+                border-radius: 8px 8px 0 0;
+            }
+            a:hover {
+                background-color: #B6D3E2;
+            }
+            a.selected {
+                background-color: #2e5d74;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* By default, hide all panels except the loading one and panels inside a panel. */
+.panel {
+    display: none;
+}
+.panel .panel,
+#loading-panel {
+    display: block;
+}
+#mainbody .tab-panel {
+    margin-top: 0;
+
+    > header {
+        display: none;
+    }
+}
+
+.display-toggle-filters {
+    float: right;
+    font-style: normal;
+    font-weight: bold;
+
+    &:before {
+        content: url('../../img/3rdparty/silk/arrow_bottom.png');
+        display: inline-block;
+        height: 16px;
+        padding: 5px;
+        vertical-align: middle;
+        width: 16px;
+    }
+    &.show:before {
+        content: url('../../img/3rdparty/silk/resultset_next.png');
+    }
+}
+
+#search-params-fieldset {
+    width: 100%;
+}
+
+th.crash-id {
+    min-width: 235px;
+}
+a.crash-id {
+    font-family: monospace;
+}
+
+.controls {
+    text-align: center;
+    position: relative;
+
+    button {
+        cursor: pointer;
+        padding: 2px 6px;
+        vertical-align: middle;
+    }
+
+    hr {
+        background-color: #ccc;
+        border-color: #ccc;
+        color: #ccc;
+        margin-top: 15px;
+        width: 60%;
+    }
+}
+
+.reports-panel {
+    .controls {
+        input {
+            width: 800px;
+        }
+    }
+}
+
+section.aggregations-panel,
+section.summary-panel {
+    .panel {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin-left: 2.4%;
+        margin-right: 2.4%;
+    }
+
+    .controls {
+        .loader {
+            background-image: url('../../img/ajax-loader16x16.gif');
+            display: inline-block;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+        }
+
+        .fields-list {
+            width: 30%;
+        }
+    }
+}
+section.summary-panel .panel {
+    header {
+        cursor: pointer;
+    }
+    .content {
+        display: none;
+    }
+}
+
+section.graph-panel {
+    .controls {
+        .channels-list {
+            width: 30%;
+        }
+    }
+}
+
+section.graphs-panel {
+    .controls {
+        .fields-list {
+            width: 30%;
+        }
+    }
+
+    .legend {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+section.correlations-panel {
+    .controls {
+        .products-list,
+        .channels-list {
+            width: 15%;
+        }
+        .products-list {
+            margin-right: 5em;
+        }
+
+        label {
+            margin-right: 0.2em;
+        }
+    }
+}
+
+.tab-inner-panel {
+    .options {
+        display: inline-block;
+        float: right;
+        height: 16px;
+        margin-top: 10px;
+        padding: 4px;
+        text-indent: -9999px;
+        width: 16px;
+
+        &.delete {
+            background-image: url('../../img/3rdparty/silk/cross.png');
+        }
+        &.show {
+            background-image: url('../../img/3rdparty/silk/resultset_previous.png');
+        }
+        &.hide {
+            background-image: url('../../img/3rdparty/silk/arrow_bottom.png');
+        }
+    }
+    .options:hover {
+        cursor: pointer;
+    }
+}
+
+.footnote {
+    font-style: italic;
+    line-height: 1.3;
+    margin: 0;
+    padding: 2px 4px;
+}
+
+.bugzilla-panel {
+    .bug_ids_expanded_list {
+        border: none;
+        display: block;
+        position: inherit;
+        width: 100%;
+    }
+}

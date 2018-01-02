@@ -1,0 +1,33 @@
+{% extends "crashstats_base.html" %}
+
+{% block site_css %}
+{{ super() }}
+{% stylesheet 'report_pending' %}
+{% endblock %}
+
+{% block site_js %}
+{{ super() }}
+{% javascript 'report_pending' %}
+{% endblock %}
+
+{% block content %}
+<div id="mainbody">
+    <div class="pending">
+        <div class="searching">
+            <h3>Please wait...</h3>
+            <p>
+                Processing this crash report only takes a few seconds.
+            </p>
+            <img src="{{ static('img/ajax-loader.gif') }}">
+        </div>
+        <div class="found" style="display:none">
+            <h3>Crash ID found!</h3>
+            <p>
+                Reloading this page now.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

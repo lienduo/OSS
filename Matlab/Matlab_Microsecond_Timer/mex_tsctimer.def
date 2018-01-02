@@ -1,0 +1,8 @@
+; mex_tsctimer.def : Declares the module parameters for the DLL.
+
+LIBRARY      "mex_tsctimer"
+DESCRIPTION  'adds high resolution timer to matlab'
+
+EXPORTS
+    ; Explicit exports can go here
+    mexFunction
